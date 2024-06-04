@@ -2,7 +2,7 @@
    hosts: web
    become: yes #equal to -b adhoc commands, getting root access
    tasks:
- - name: install nginx
+  - name: install nginx
    ansible.builtin.dnf: 
    name:  nginx
    state: latest
@@ -10,7 +10,6 @@
  ansible.builtin.service:
  name: nginx
  state: started
-
  enabled: yes
 
   
